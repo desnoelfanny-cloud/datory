@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="DATORY transforme les données publiques en histoires simples, utiles et surprenantes." />
+    <meta name="theme-color" content="#2563eb" />
+    <meta property="og:title" content="DATORY — Les histoires derrière les données" />
+    <meta property="og:description" content="DATORY transforme les données publiques en histoires simples, utiles et surprenantes." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/favicon.svg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>DATORY — Les histoires derrière les données</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="#" aria-label="DATORY accueil">
+          <img class="brand-logo" src="assets/logo/datory-logo.svg" alt="Logo DATORY" />
+          <span class="brand-name">DATORY</span>
+        </a>
+        <nav class="topnav" aria-label="Navigation principale">
+          <a href="#stories">À l'instant</a>
+          <a href="#themes">Thèmes</a>
+          <a href="#about">À propos</a>
+        </nav>
+      </header>
+
+      <main>
+        <!-- Hero editorial -->
+        <section class="hero" id="about">
+          <div class="hero-copy">
+            <div class="hero-brandmark" aria-hidden="true">
+              <img class="hero-logo" src="assets/logo/datory-logo.svg" alt="Logo DATORY" />
+            </div>
+            <p class="eyebrow">NOUVEAU MÉDIA DATA</p>
+            <h1>Les données parlent.<br /><span class="hero-accent">Datory les traduit.</span></h1>
+            <p class="hero-subtitle">
+              Datory analyse les données publiques, détecte les tendances et les transforme en histoires claires, utiles et vérifiables.
+            </p>
+            <a class="hero-cta" href="#stories">Voir les tendances du jour</a>
+
+            <div class="hero-meta">
+              <span>Sources publiques</span>
+              <span>Stories éditoriales</span>
+              <span>Mis à jour en continu</span>
+            </div>
+          </div>
+
+          <aside class="signal-card" aria-label="Le signal du jour">
+            <div class="signal-number">92</div>
+            <p class="signal-label">score d’intérêt</p>
+            <p>
+              Un sujet est retenu lorsqu’il est utile, récent, surprenant ou très partageable.
+            </p>
+          </aside>
+        </section>
+
+        <!-- Section Aujourd’hui -->
+        <section class="today-section" id="stories">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Aujourd’hui</p>
+              <h3>Les stories qui donnent envie d’aller plus loin.</h3>
+            </div>
+            <a class="text-link" href="#">Explorer toutes les tendances</a>
+          </div>
+
+          <div class="filter-row" id="story-filters" aria-label="Filtres de stories"></div>
+          <div class="story-detail" id="story-detail" hidden></div>
+          <div class="today-grid" id="today-grid"></div>
+        </section>
+
+        <section class="sources-section" id="sources">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Sources utilisées</p>
+              <h3>Un socle de données publiques, avec des connexions à venir.</h3>
+            </div>
+          </div>
+          <div class="sources-list">
+            <div class="source-pill">INSEE <span>prévu</span></div>
+            <div class="source-pill">data.gouv.fr <span>connecté</span></div>
+            <div class="source-pill">Base Adresse Nationale <span>connecté</span></div>
+            <div class="source-pill">Eurostat <span>prévu</span></div>
+            <div class="source-pill">Banque de France <span>prévu</span></div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="models/DataItem.js"></script>
+    <script src="config/constants.js"></script>
+    <script src="config/categories.js"></script>
+    <script src="utils/helpers.js"></script>
+    <script src="utils/formatDate.js"></script>
+    <script src="components/DataCard.js"></script>
+    <script src="components/Header.js"></script>
+    <script src="components/Hero.js"></script>
+    <script src="components/index.js"></script>
+    <script src="data/mockData.js"></script>
+    <script src="services/api/ban.js"></script>
+    <script src="services/api/geo.js"></script>
+    <script src="services/api/dataGouv.js"></script>
+    <script src="services/api/openMeteo.js"></script>
+    <script src="services/api/worldBank.js"></script>
+    <script src="services/api/rte.js"></script>
+    <script src="services/api/insee.js"></script>
+    <script src="services/api/index.js"></script>
+    <script src="services/story/storyGenerator.js"></script>
+    <script src="services/story/scoreCalculator.js"></script>
+    <script src="services/editorialEngine.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
